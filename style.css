@@ -1,0 +1,82 @@
+/* Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    scroll-behavior: smooth;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Menu de Navegação */
+.menu-navegacao {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #2c3e50;
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.menu-navegacao ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+.menu-navegacao a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.menu-navegacao a:hover {
+    background-color: #3498db;
+}
+
+/* Seções */
+.secao {
+    min-height: 100vh;
+    padding: 6rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.secao:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.secao h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+.secao p {
+    max-width: 800px;
+    font-size: 1.1rem;
+}
+
+/* Efeito de Scroll Suave Personalizado */
+@media (prefers-reduced-motion: no-preference) {
+    .scroll-suave {
+        scroll-behavior: smooth;
+        transition: scroll 0.5s ease-in-out;
+    }
+}
+
+/* Indicador Visual de Seção Ativa */
+.link-ativo {
+    background-color: #3498db !important;
+    font-weight: bold;
+}
