@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('.link-suave');
     
-    // Adiciona evento de clique a todos os links
     links.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -16,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Observador de Intersecção para destacar link ativo
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -27,15 +25,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, { threshold: 0.5 });
     
-    // Observa todas as seções
     document.querySelectorAll('.secao').forEach(secao => {
         observer.observe(secao);
     });
     
-    // Função para rolar suavemente
     function rolarParaSecao(elemento) {
         const posicao = elemento.getBoundingClientRect().top + window.pageYOffset;
-        const posicaoAjustada = posicao - 80; // Ajuste para o menu fixo
+        const posicaoAjustada = posicao - 80; 
         
         window.scrollTo({
             top: posicaoAjustada,
@@ -43,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Atualiza o link ativo no menu
     function atualizarLinkAtivo(link) {
         if (!link) return;
         
@@ -54,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function() {
         link.classList.add('link-ativo');
     }
     
-    // Adiciona classe ativa ao carregar a página
     const secaoInicial = document.querySelector('.secao');
     if (window.location.hash) {
         const linkInicial = document.querySelector(`.link-suave[href="${window.location.hash}"]`);

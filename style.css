@@ -1,4 +1,3 @@
-/* Estilos Gerais */
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +11,6 @@ body {
     color: #333;
 }
 
-/* Menu de Navegação */
 .menu-navegacao {
     position: fixed;
     top: 0;
@@ -41,7 +39,6 @@ body {
     background-color: #3498db;
 }
 
-/* Seções */
 .secao {
     min-height: 100vh;
     padding: 6rem 2rem 2rem;
@@ -67,7 +64,6 @@ body {
     font-size: 1.1rem;
 }
 
-/* Efeito de Scroll Suave Personalizado */
 @media (prefers-reduced-motion: no-preference) {
     .scroll-suave {
         scroll-behavior: smooth;
@@ -75,7 +71,6 @@ body {
     }
 }
 
-/* Indicador Visual de Seção Ativa */
 .link-ativo {
     background-color: #3498db !important;
     font-weight: bold;
